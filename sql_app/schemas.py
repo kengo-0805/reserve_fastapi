@@ -7,10 +7,10 @@ class BookingCreate(BaseModel):
     user_id: int
     room_id: int
     booked_num: int
-    strat_date_time: datetime.datetime
-    end_date_time: datetime.datetime
+    start_datetime: datetime.datetime
+    end_datetime: datetime.datetime
 
-class Booking(BaseModel):
+class Booking(BookingCreate):
     booking_id: int
 
     # SQLAlchemyなどormapperにも対応するための設定
